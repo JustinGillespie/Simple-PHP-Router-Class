@@ -5,7 +5,7 @@ class Router_Command {
 	var $command_name = "";
 	var $param = array();
 	
-	function Router_Command($command_name, $param) {
+	function __construct($command_name, $param) {
 		$this->command_name = $command_name;
 		$this->param = $param;
 	}

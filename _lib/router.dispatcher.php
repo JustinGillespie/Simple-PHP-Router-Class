@@ -5,7 +5,7 @@ class Router_Dispatcher {
 	var $command;
 	var $gittesting;
 	
-	function Router_Dispatcher($command) {
+	function __construct($command) {
 		$this->command = $command;
 	}
 	

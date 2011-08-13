@@ -2,7 +2,7 @@
 
 class Router_Interpreter {
 
-	function Router_Interpreter() {
+	function __construct() {
 	
 		$uri = $_SERVER['REQUEST_URI'];
 		$uri_format = (substr($uri, -1) == '/') ? $uri : $uri . '/';

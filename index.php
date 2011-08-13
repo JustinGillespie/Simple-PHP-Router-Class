@@ -1,13 +1,12 @@
 <?php
 
-include('_lib/router.command.php');
-include('_lib/router.interpreter.php');
-include('_lib/router.dispatcher.php');
+include('_lib/router.php');
 
-$interpreter =  new Router_Interpreter();
-$command     =  $interpreter->get_command();
-$dispatch    =  new Router_Dispatcher($command);
+$router = new Router();
 
-$dispatch->Dispatch();
+$controller = $router->get_controller();
+$param      = $router->get_param();
+
+$router->init($controller, $param);
 
 ?>
